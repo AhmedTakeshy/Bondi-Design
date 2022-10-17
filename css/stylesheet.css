@@ -1,0 +1,259 @@
+:root {
+  --main-bg: #19283f;
+  --main-color: #5bd2cc;
+  --black: rgb(0, 0, 0);
+  --yellow: #f8c446;
+  --white: #fff;
+  --red: #ed3a4d;
+  --section-color: #eff7fa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* components start */
+.main-btn {
+  background-color: var(--red);
+  color: var(--yellow);
+  padding: 0.5rem 1rem;
+}
+
+.main-btn:hover {
+  background-color: var(--red);
+  color: var(--main-bg);
+}
+
+.main-title::after {
+  content: "";
+  width: 7.5rem;
+  height: 2px;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: -1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+/* components end */
+
+/* navbar start */
+.navbar {
+  background-color: var(--main-bg);
+}
+
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--main-color);
+}
+
+.navbar .search svg {
+  color: var(--main-color);
+}
+
+.navbar .search {
+  border-left: 1px solid var(--main-color);
+}
+
+.navbar .navbar-toggler {
+  color: white;
+  font-size: 1.5rem;
+  border-color: white;
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--main-color);
+}
+
+.navbar .navbar-toggler:hover {
+  text-decoration: none;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+/* navbar end */
+
+/* landing start */
+.landing {
+  background-color: var(--main-bg);
+  min-height: calc(100vh - 72px);
+}
+/* landing end */
+
+/* service start */
+.service .icons-holder {
+  height: 12.5rem;
+}
+.service .icons-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.service .icons-holder .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+.service .icons-holder .icon {
+  font-size: 4rem;
+  color: var(--main-color);
+}
+.service .content h4 {
+  color: var(--yellow);
+}
+/* service end */
+
+/* portfolio start */
+.portfolio {
+  background-color: var(--section-color);
+}
+.portfolio ul li.active {
+  background-color: var(--red);
+  color: var(--yellow);
+  cursor: pointer;
+}
+.portfolio ul li {
+  padding: 0.5rem 1rem;
+}
+
+.portfolio ul li:hover:not(.active) {
+  color: var(--red);
+  cursor: pointer;
+}
+
+.portfolio .box {
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio .box::before {
+  content: attr(data-work);
+  position: absolute;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background-color: rgb(51 209 204/76%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--white);
+  transition: transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -ms-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+  transform: translateX(calc(-100% - 5px));
+  -webkit-transform: translateX(calc(-100% - 5px));
+  -moz-transform: translateX(calc(-100% - 5px));
+  -ms-transform: translateX(calc(-100% - 5px));
+  -o-transform: translateX(calc(-100% - 5px));
+}
+
+.portfolio .box:hover::before {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+/* portfolio end */
+
+/* about start */
+.about .description {
+  max-width: 31rem;
+}
+/* about end */
+
+/* team start */
+.team {
+  background-color: var(--section-color);
+}
+
+.team h2 {
+  color: var(--yellow);
+}
+
+.team .box h4 {
+  background-color: var(--main-color);
+}
+/* team end */
+
+/* project start */
+.project {
+  background-color: var(--main-bg);
+}
+/* project end */
+
+/* subscribe start */
+.subscribe {
+  background-color: var(--yellow);
+}
+
+.subscribe input[type="text"] {
+  border: none;
+  border-bottom: 1px solid var(--white);
+}
+
+.subscribe input[type="text"]:focus {
+  outline: none;
+}
+
+.subscribe input::placeholder {
+  color: var(--white);
+}
+
+.subscribe input[type="submit"] {
+  background-color: var(--main-bg);
+  color: var(--yellow);
+}
+/* subscribe end */
+
+/* footer start */
+.footer {
+  background-color: var(--main-bg);
+}
+
+.footer .copyright > span {
+  color: var(--main-color);
+}
+
+.footer .copyright div span {
+  color: var(--yellow);
+}
+
+.footer .contact ul svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.footer .contact ul .facebook {
+  background-color: #1877f2;
+}
+.footer .contact ul .twitter {
+  background-color: #1da1f2;
+}
+.footer .contact ul .linkedin {
+  background-color: #0077b5;
+}
+.footer .contact ul .youtube {
+  background-color: #ff0000;
+}
+/* footer end */
